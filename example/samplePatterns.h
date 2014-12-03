@@ -10,29 +10,29 @@ typedef enum { GREEN, RED, BLUE, WHITE } color_t;
 // increments them by one bit to the next color in the color wheel.  It will
 // only change one color at a time, and follows this pattern:
 //    ONE:
-//		R:255
-//		G:0-255
-//		B:0
-//	  TWO:
-//		R:255-0
-//		G:255
-//		B:0
-//	  THREE:
-//		R:0
-//		G:255
-//		B:0-255
-//	  FOUR:
-//		R:0
-//		G:255-0
-//		B:255
-//	  FIVE:
-//		R:0-255
-//		G:0
-//		B:255
-//	  SIX:
-//		R:255
-//		G:0
-//		B:255-0
+//      R:255
+//      G:0-255
+//      B:0
+//    TWO:
+//      R:255-0
+//      G:255
+//      B:0
+//    THREE:
+//      R:0
+//      G:255
+//      B:0-255
+//    FOUR:
+//      R:0
+//      G:255-0
+//      B:255
+//    FIVE:
+//      R:0-255
+//      G:0
+//      B:255
+//    SIX:
+//      R:255
+//      G:0
+//      B:255-0
 //
 // @input *ui8Green is the intensity of the green LED
 // @input *ui8Red is the intensity of the red LED

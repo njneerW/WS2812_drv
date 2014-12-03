@@ -12,29 +12,29 @@
 // increments them by one bit to the next color in the color wheel.  It will
 // only change one color at a time, and follows this pattern:
 //    ONE:
-//		R:255
-//		G:0-255
-//		B:0
-//	  TWO:
-//		R:255-0
-//		G:255
-//		B:0
-//	  THREE:
-//		R:0
-//		G:255
-//		B:0-255
-//	  FOUR:
-//		R:0
-//		G:255-0
-//		B:255
-//	  FIVE:
-//		R:0-255
-//		G:0
-//		B:255
-//	  SIX:
-//		R:255
-//		G:0
-//		B:255-0
+//      R:255
+//      G:0-255
+//      B:0
+//    TWO:
+//      R:255-0
+//      G:255
+//      B:0
+//    THREE:
+//      R:0
+//      G:255
+//      B:0-255
+//    FOUR:
+//      R:0
+//      G:255-0
+//      B:255
+//    FIVE:
+//      R:0-255
+//      G:0
+//      B:255
+//    SIX:
+//      R:255
+//      G:0
+//      B:255-0
 //
 // @input *ui8Green is the intensity of the green LED
 // @input *ui8Red is the intensity of the red LED
@@ -101,11 +101,11 @@ void rainbowShift(uint8_t *ui8Green, uint8_t *ui8Red, uint8_t *ui8Blue)
 //*****************************************************************************
 void rainbowInit(uint8_t ints[][3], uint8_t ui8NumLED)
 {
-	//
-	// For the love of toast, why didn't I comment this while I was writing it?
-	// ...oh right, it was probably 2 in the morning.  If anyone's trying to
-	// fix a bug here, good luck :(
-	//
+    //
+    // For the love of toast, why didn't I comment this while I was writing it?
+    // ...oh right, it was probably 2 in the morning.  If anyone's trying to
+    // fix a bug here, good luck :(
+    //
 
     int i;
     int j;
@@ -113,9 +113,9 @@ void rainbowInit(uint8_t ints[][3], uint8_t ui8NumLED)
 
     for(i=0;i<ui8NumLED;i+=ledPerSect)
     {
-    	//
-    	// Cycle through each of the six LED sections
-    	//
+        //
+        // Cycle through each of the six LED sections
+        //
         if(i < (ui8NumLED/NUMSECT) * 1)
         {
             ledPerSect = ui8NumLED/NUMSECT;

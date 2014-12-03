@@ -36,7 +36,7 @@ extern "C"
 //
 //*****************************************************************************
 extern void InitSPITransfer(uint8_t *pui8SPIData, uint16_t ui16DataSize,
-		                    uint8_t *pui8DoneVar);
+                            uint8_t *pui8DoneVar);
 
 //*****************************************************************************
 //

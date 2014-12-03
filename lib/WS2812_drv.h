@@ -50,7 +50,7 @@ extern "C"
 //
 //*****************************************************************************
 extern void InitSPITransfer(uint8_t *pui8SPIData, uint16_t ui16DataSize,
-		                    uint8_t *pui8DoneVar);
+                            uint8_t *pui8DoneVar);
 
 //*****************************************************************************
 //
@@ -99,11 +99,11 @@ extern void WStoSPI(uint8_t *pi8SPIData, uint8_t ui8Color);
 // @input pui8SPIData is the location in the SPI array of where the color value
 //        is to begin being written
 // @input ui8Green is the green color to be translated from 1 byte GRB to the
-//		  SPI bitstream value
+//        SPI bitstream value
 // @input ui8Red is the red color to be translated from 1 byte GRB to the
-//		  SPI bitstream value
+//        SPI bitstream value
 // @input ui8Blue is the blue color to be translated from 1 byte GRB to the
-//		  SPI bitstream value
+//        SPI bitstream value
 //
 //*****************************************************************************
 extern void WSGRBtoSPI(uint8_t *pi8SPIData, uint8_t ui8Green, uint8_t ui8Red,
