@@ -35,6 +35,21 @@ extern "C"
 
 //*****************************************************************************
 //
+// Initialize an SPI out array to all LEDs off
+//
+// This function will fill the SPI array with values that will be interpreted
+// by the LEDs as logical zeros.  Note that this isn't filling the array with
+// zeroes, but rather filling the array with the values needed to set all RGB
+// values of all LEDs to be off.
+//
+// @input pui8SPIData is the array containing the SPI data to send
+// @input ui16Len is the number of bytes the data array can hold
+//
+//*****************************************************************************
+extern void WSArrayInit(uint8_t *pi8SPIData, uint16_t ui16Len);
+
+//*****************************************************************************
+//
 // Write a color byte to a set of SPI out bytes
 //
 // This function take a 1 byte color value and a location in the SPI data array

@@ -158,7 +158,6 @@ InitSPITransfer(uint8_t *pui8SPIData, uint16_t ui16DataSize,
     for(i=0;i<ui16DataSize;i++)
     {
         WSArrayInit(pui8SPIData, ui16DataSize);
-        //pui8SPIData[i] = 0;
     }
 
     //
