@@ -8,6 +8,7 @@
 #include <stdbool.h>
 
 #include "inc/hw_memmap.h"
+#include "driverlib/cpu.h"
 #include "driverlib/gpio.h"
 #include "driverlib/pin_map.h"
 #include "driverlib/rom.h"
@@ -134,6 +135,7 @@ main(void)
                     WSGRBtoSPI(pui8SPIOut[i], pui8Colors[i][0],
                                pui8Colors[i][1], pui8Colors[i][2]);
             }
+            CPUwfi();
         }
     }
 }
