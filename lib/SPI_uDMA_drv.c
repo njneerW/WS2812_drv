@@ -79,7 +79,7 @@ SSI1IntHandler(void)
         {
             ROM_uDMAChannelControlSet(UDMA_CHANNEL_SSI1TX | UDMA_PRI_SELECT,
                                           UDMA_SIZE_8 | UDMA_SRC_INC_8 |
-                                          UDMA_DST_INC_NONE | UDMA_ARB_4);
+                                          UDMA_DST_INC_NONE | UDMA_ARB_8);
             ROM_uDMAChannelTransferSet(UDMA_CHANNEL_SSI1TX | UDMA_PRI_SELECT,
                                    UDMA_MODE_BASIC, g_pui8SPIArray,
                                    (void *)(SSI1_BASE + SSI_O_DR),
@@ -98,7 +98,7 @@ SSI1IntHandler(void)
             //
             ROM_uDMAChannelControlSet(UDMA_CHANNEL_SSI1TX | UDMA_PRI_SELECT,
                                           UDMA_SIZE_8 | UDMA_SRC_INC_NONE |
-                                          UDMA_DST_INC_NONE | UDMA_ARB_4);
+                                          UDMA_DST_INC_NONE | UDMA_ARB_8);
             ROM_uDMAChannelTransferSet(UDMA_CHANNEL_SSI1TX | UDMA_PRI_SELECT,
                                                UDMA_MODE_BASIC, &ucZero,
                                                (void *)(SSI1_BASE + SSI_O_DR),
@@ -245,7 +245,7 @@ InitSPITransfer(uint8_t *pui8SPIData, uint16_t ui16DataSize,
     //
     ROM_uDMAChannelControlSet(UDMA_CHANNEL_SSI1TX | UDMA_PRI_SELECT,
                               UDMA_SIZE_8 | UDMA_SRC_INC_8 | UDMA_DST_INC_NONE |
-                              UDMA_ARB_4);
+                              UDMA_ARB_8);
 
     //
     // Set up the transfer parameters for the uDMA SSI TX channel.  This will
