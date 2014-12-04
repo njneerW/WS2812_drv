@@ -125,16 +125,30 @@ main(void)
 
     while(1)
     {
+        //
+        // Check to see if the SPI buffer is done sending out data
+        //
         if(ui8SPIDone)
         {
             ui8SPIDone = 0;
             for(i=0;i<30;i++)
             {
-                    rainbowShift(&(pui8Colors[i][0]), &(pui8Colors[i][1]),
-                                 &(pui8Colors[i][2]));
-                    WSGRBtoSPI(pui8SPIOut[i], pui8Colors[i][0],
-                               pui8Colors[i][1], pui8Colors[i][2]);
+                //
+                // Update the RGB colors to the next value in the color wheel
+                //
+                rainbowShift(&(pui8Colors[i][0]), &(pui8Colors[i][1]),
+                             &(pui8Colors[i][2]));
+                //
+                // Update the SPI transmit array to reflect the new RGB values
+                //
+                WSGRBtoSPI(pui8SPIOut[i], pui8Colors[i][0],
+                           pui8Colors[i][1], pui8Colors[i][2]);
             }
+
+            //
+            // Tell the processor to stop executing instructions and relax
+            // while the uDMA engine finishes its job.
+            //
             CPUwfi();
         }
     }
