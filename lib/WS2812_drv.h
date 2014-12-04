@@ -33,41 +33,6 @@ extern "C"
 //
 //*****************************************************************************
 
-#if 0
-//*****************************************************************************
-//
-// Kick off the SPI uDMA transfers.
-//
-// This function will configure the uDMA engine and SSI1 peripheral to
-// continually data to a chain of WS2812b LEDs connected to PF1.
-//
-// @input pui8SPIData is the array containing the SPI data to send
-// @input ui16DataSize is the number of bytes the data array can hold
-// @input pui8DoneVar is a flag that can be used to determine when an LED frame
-//        has finished transmitting.  This flag will be initialized to 0 on the
-//        first uDMA start, and will be set to 1 each time the uDMA engine
-//        finishes sending the entire SPI buffer.
-//
-//*****************************************************************************
-extern void InitSPITransfer(uint8_t *pui8SPIData, uint16_t ui16DataSize,
-                            uint8_t *pui8DoneVar);
-
-//*****************************************************************************
-//
-// Initialize an SPI out array to all LEDs off
-//
-// This function will fill the SPI array with values that will be interpreted
-// by the LEDs as logical zeros.  Note that this isn't filling the array with
-// zeroes, but rather filling the array with the values needed to set all RGB
-// values of all LEDs to be off.
-//
-// @input pui8SPIData is the array containing the SPI data to send
-// @input ui16Len is the number of bytes the data array can hold
-//
-//*****************************************************************************
-extern void WSArrayInit(uint8_t *pi8SPIData, uint16_t ui16Len);
-#endif
-
 //*****************************************************************************
 //
 // Write a color byte to a set of SPI out bytes
